@@ -18,5 +18,5 @@ def send_file(path):
 	return open(path,'r').read()
 
 def allow_cors(res):
-  res.headers.add('Access-Control-Allow-Origin', '*')
+  res.headers.add('Access-Control-Allow-Origin', '*') # not so secure :(
   return res
