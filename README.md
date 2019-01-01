@@ -1,5 +1,6 @@
 # Jsepy
-This framework isn't ready for production it's still in development 
+Jsepy is hybrid GUI framwork using python as backend the HTML/JS/CSS as frontend  
+**This framework isn't ready for production it's still in development**
 
 # App route
 ```
