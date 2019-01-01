@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+	<script type="text/javascript" src="/japi"></script>
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<style type="text/css">
+body{
+	padding-left: 50px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+</style>
+<body>
+	<h3> Jsepy GUI 0.01b </h3>
+
+	<button class="waves-effect waves-light btn" class='alert-btn' onclick="alert('Hi')">Alert</button>
+
+
+    <div class="row">
+        <div class="input-field col s6">
+            <input id="list-inpt" type="text">
+            <label for="name">Path</label>
+        </div>
+        <div class="input-field col s6">
+            <button class="btn waves-effect waves-light" type="submit" onclick="list_files()" name="action">List files
+            </button>
+        </div>
+        <p id="out"></p>
+    </div>
+
+	
+
+	<button class="waves-effect waves-light btn" onclick="run_calc()" class="calc-btn">Run Calc.exe</button>
+
+	<script type="text/javascript">
+		function list_files(){
+			var list_txt = document.getElementById('list-inpt').value;
+			Python({
+				fn:'py_list_files',
+				args: [list_txt],
+				callback:function(res){
+					var output = document.getElementById('out');
+					output.innerHTML = res;
+				}
+			})
+		}
+
+
+
+		function run_calc() {
+			Python({
+				fn:'py_run_calc'
+			})
+		}
+
+	</script>
+</body>
+</html>
