@@ -1,5 +1,5 @@
 # Jsepy
-Jsepy is hybrid GUI framwork using python as backend the HTML/JS/CSS as frontend  
+Jsepy is hybrid GUI framwork using python as backend and HTML/JS/CSS as frontend gui. 
 **This framework isn't ready for production it's still in development**
 
 # App route
