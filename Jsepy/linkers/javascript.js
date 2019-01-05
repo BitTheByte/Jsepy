@@ -1,9 +1,12 @@
-var endpoint = "http://localhost:5000/api/py/"
+var endpoint = '/api/python/'
+
 
 
 var script = document.createElement("script"); 
 script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'; 
 document.head.appendChild(script);
+
+
 
 function Python(options) {
 
@@ -31,35 +34,3 @@ function Python(options) {
 		success:JsCallBack
 	})
 }
-
-
-/*
-function PY(){
-
-	var PyFuncName  = 	arguments[0]
-	var PyArguments	=	"";
-	var PyAPIPath	=	"";
-
-	for (var i=1; i < arguments.length; i++){
-		PyArguments += "/" + encodeURIComponent(arguments[i]);
-	}
-
-	if (PyArguments.length > 0){
-		PyAPIPath = endpoint + PyFuncName + PyArguments
-	}else{
-		PyAPIPath = endpoint + PyFuncName
-	}
-
-
-	return PyAPIPath;
-}
-
-
-function CALL(uri,fn)
-{
-	$.get({
-		type:'GET',
-		url: uri,
-		success:fn
-	})
-}*/

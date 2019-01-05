@@ -1,6 +1,7 @@
 
-def handler(module,path):
-	target  = path.replace("/api/py/","").split("/")
+def handler(module,path,api_path):
+
+	target  = path.replace(api_path,"").split("/")
 	fn,args = target[0],target[1::]
 	fn = getattr(module, fn,None)
 	if fn:
