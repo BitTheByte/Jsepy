@@ -6,12 +6,13 @@ Jsepy is hybrid GUI framwork using python as backend and HTML/JS/CSS as frontend
 ```
   App : Demo app using Jsepy
     |-> main.html : Main gui window
-    |-> export.py : Python code accessable though the linker 
+    |-> other.html : Html window
+    |-> export.py : Python code accessable from the linker 
+
   Jsepy : Main library folder
-    |-> server.py : Backend server
-    |-> config.py : User config settings including (Export file , Window name , Gui files)
+    |-> app.py : Jsepy code
+    |-> tools.py : Rendering code
     |-> linkers/  : Files to provide communication between js and python
-    |-> helpers/  : Helper python files
  ```
 # Demo app
 ![](Assets/main.png)
