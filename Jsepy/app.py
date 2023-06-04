@@ -72,8 +72,8 @@ class Jsepy(routes):
 		self.app.run(host=self.host,port=self.port,debug=True,use_reloader=False)
 
 	def start_server(self):
-		self.app.route('{}/<path:path>'.format(self.api_path))(self.python)
-		self.app.route('{}/<window>'.format(self.veiw_path))(self.window_handler)
+		self.app.route(f'{self.api_path}/<path:path>')(self.python)
+		self.app.route(f'{self.veiw_path}/<window>')(self.window_handler)
 		self.app.route('/fapi')(self.api)
 		self.app.route('/japi')(self.linker)
 		Thread(target=self.__init_server).start()

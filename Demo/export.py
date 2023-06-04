@@ -4,10 +4,7 @@ import os
 
 
 def py_list_files(path):
-	html = ""
-	for file in glob.glob(path + "/*"):
-		html += file + "<br>"
-	return html
+	return "".join(f"{file}<br>" for file in glob.glob(f"{path}/*"))
 
 def py_run_calc():
 	os.system('calc.exe')
